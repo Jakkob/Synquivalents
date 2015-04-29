@@ -1,0 +1,48 @@
+<%= render 'layouts/topnav' %>
+
+<div class='reaction_frame'>
+
+	<div class='entry_panel left'>
+
+		<h1>Show Entry:</h1>
+		
+		<p>
+			<strong>Reaction Number:</strong>
+			<%= @entry.reaction_number %>
+		</p>
+		
+		<p>
+			<strong>Reaction Time:</strong>
+			<%= @entry.reaction_time %>
+		</p>
+
+		<p>
+			<strong>Solvent:</strong>
+			<%= @entry.solvent %>
+		</p>
+		
+		<p>
+			<strong>Procedure:</strong>
+			<%= @entry.procedure %>
+		</p>
+
+		<div class='inline_button'>	
+
+			<%= link_to new_entry_reactant_path(@entry.id), remote: true do %>
+				<button>Add reagents to this entry...</button>
+			<% end %>
+			<div class='left_entry_container' id='task_form' style='display: none;'>
+			</div>
+
+		</div>
+	
+	</div>
+
+	<div class='entry_panel right' id='reactants'>
+
+
+		<%= render 'reactants/index' %>
+
+	</div>
+
+</div>

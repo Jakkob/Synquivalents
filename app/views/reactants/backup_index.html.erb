@@ -1,0 +1,26 @@
+<div>
+
+	<h3 class='title_text'>Starting Material:</h3>
+		<p class='title_text'><%= @start_mat_print %></p>
+	
+
+</div>
+
+<div>
+
+	<% @reactants.each do |other| %>
+
+		<% if other.starting_material != true then %>
+
+			<h3 class='title_text'>Reactant Name:</h3>
+				<p class='title_text'><%= other.reagents_id %></p>
+			<h3 class='title_text'>Equivalents:</h3>
+				<p class='title_text'><%= other.equivalents %></p>
+		<% end %>
+			<%= link_to 'Delete Reactant', entry_reactant_path(:entry_id => @entry.id),
+			method: :delete,
+			data: { confirm: 'Are you shure that you want ot delete this reactant?' } %>
+
+	<% end%>
+
+</div>

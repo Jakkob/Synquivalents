@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  starting_material: false
+  equivalents: 1.5
+  entry_id: 
+
+two:
+  starting_material: false
+  equivalents: 1.5
+  entry_id: 

@@ -1,0 +1,28 @@
+<%= render 'layouts/topnav' %>
+
+<h2 class='title_text'>Listing of available entries:</h2></br>
+
+<div class='grid_frame'>
+
+<% @entries.each do |entry| %>
+	<div class='index_block'>
+		
+		<h4 class='title_text'>Reaction Number:</h4></br>
+			<p class='title_text'><%= best_in_place entry, :reaction_number, :as => :input %></p></br>
+		<h4 class='title_text'>Reaction Time:</h4></br>
+			<p class='title_text'><%= entry.reaction_time %></p></br>
+		<h4 class='title_text'>Procedure:</h4></br>
+			<p class='title_text'><%= entry.procedure %></p></br>
+		
+		<p class='title_text'><%= link_to 'View Entry', entry_path(entry) %></p>
+
+		<p class='title_text'><%= link_to 'Edit Entry', edit_entry_path(entry) %>
+		</p>
+
+		<p class='title_text'><%= link_to 'Delete Entry', entry_path(entry),
+			method: :delete,
+			data: { confirm: 'Are you sure that you want to delete this entry?' } %></p>
+	</div>
+<% end %>
+
+</div>

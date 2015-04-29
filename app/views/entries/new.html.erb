@@ -1,0 +1,25 @@
+<%= render 'layouts/topnav' %>
+
+<h2 class= 'title_text'>New Entry:</h2>
+
+<%= form_for :entry, url: entries_path do |f| %>
+	
+	<div class="form_text">
+		<span><%= f.label :reaction_number %></span>:
+		<%= f.text_field :reaction_number %>
+	</div></br>
+
+	<div class="form_text">
+		<span><%= f.label :reaction_time %></span>:
+		<%= f.text_field :reaction_time %>
+	</div></br>
+
+	<div class="form_text">
+		<span><%= f.label :procedure %></span>:
+		<%= f.text_field :procedure %>
+	</div></br>
+
+	<div class="form_text">
+		<%= f.submit %>
+	</div>
+<% end %>

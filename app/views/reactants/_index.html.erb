@@ -1,0 +1,35 @@
+<div id='reactants_start_mat'>
+<h2>Starting Material:</h2>
+	<% @reactants.where( starting_material: true ).each do |start_mat| %>
+		
+		<% @reagent = Reagent.find_by(id: start_mat.reagents_id) %>
+		<div class='entry_container'>
+		<h3 class='title_text'>Reactant Name:</h3>
+			<p class='title_text'><%= @reagent.name %></p>
+		<h3 class='title_text'>Equivalents:</h3>
+			<p class='title_text'><%= start_mat.equivalents %></p>
+		<%= link_to 'Delete Reactant', entry_reactant_path({:id => start_mat.id, :entry_id => @entry.id}),
+		method: :delete,
+		data: { confirm: 'Are you shure that you want to delete this reactant?' } %>
+		</div>
+	<% end%>
+	
+</div>
+
+<div id='reactants_others'>
+<h2>Reactants:</h2>
+	<% @reactants.where( starting_material: false ).each do |other| %>
+	
+		<% @reagent = Reagent.find_by(id: other.reagents_id) %>
+		<div class='entry_container'>
+		<h3 class='title_text'>Reactant Name:</h3>
+			<p class='title_text'><%= @reagent.name %></p>
+		<h3 class='title_text'>Equivalents:</h3>
+			<p class='title_text'><%= other.equivalents %></p>
+		<%= link_to 'Delete Reactant', entry_reactant_path({:id => other.id, :entry_id => @entry.id}),
+		method: :delete,
+		data: { confirm: 'Are you shure that you want to delete this reactant?' } %>
+		</div>
+	<% end%>
+
+</div>

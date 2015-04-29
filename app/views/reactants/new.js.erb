@@ -1,0 +1,6 @@
+$('#task_form').html("<%= escape_javascript(render 'new') %>");
+$('#task_form').slideDown(350);
+$('#task_form').on('ajax:success', (e, data, status, xhr), function() {
+	$('#reactants').html( "<%= escape_javascript(render 'reactants/index') %>" );
+	$('#task_form').slideUp(350);
+});

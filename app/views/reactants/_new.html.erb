@@ -1,0 +1,22 @@
+<%= form_for @reactant, url: entry_reactants_path, remote: true do |f| %>
+	
+	<div class='form_text'>
+		<%= f.label :starting_material %>
+		<%= f.check_box :starting_material %>
+	</div></br>
+
+	<div class='form_text'>
+		<%= f.label :reagents_id %>
+		<%= f.select( :reagents_id, @reagents.map { |g| [ g.name, g.id ] }) %>
+	</div></br>
+
+	<div class='form_text'>
+		<%= f.label :equivalents %>
+		<%= f.text_field :equivalents %>
+	</div></br>
+
+	<div class='form_text'>
+		<%= f.submit %>
+	</div>
+
+<% end %>

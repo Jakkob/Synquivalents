@@ -1,0 +1,22 @@
+<div class="topNav">
+	<div class="container">
+		<nav class="logo">
+			<h2 class="title"><%= link_to 'Syn-', '/' %></h1>
+		</nav>
+			<h2 style= "margin-left: 5px" class="title">Quivalents</h1>
+		<nav class="dash">
+			<div class="button">
+				<h3>Login</h3>
+			</div>
+			<div class="button" id='reagent_button'>
+				<h3><%= link_to "Reagent Library", reagents_path %></h3>
+			</div>
+			<div class="button">
+				<h3><%= link_to "Show Entries", entries_path %></h3>
+			</div>
+			<div class="button">
+				<h3><%= link_to "New Entry", new_entry_path %></h3>
+			</div>
+		</nav>
+	</div>
+</div>

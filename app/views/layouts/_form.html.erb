@@ -1,0 +1,16 @@
+<%= form_for '@entry', url: '/entry/' do |f| %>
+	
+	<div class="form_text">
+		<span><%= f.label :reaction_number %></span>:
+		<%= f.text_field :reaction_number %>
+	</div>
+
+
+
+	<div class="form_text">
+		<%= f.submit %>
+	</div>
+<%= :starting_material => nil %>
+<%= :reaction_time => nil %>
+<%= :procedure => nil %>
+<% end %>
