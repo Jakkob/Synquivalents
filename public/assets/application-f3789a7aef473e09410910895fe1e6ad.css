@@ -1,0 +1,199 @@
+html {
+  text-decoration: none;
+  color: white;
+  font-family: Helvetica, sans-serif; }
+  html a {
+    text-decoration: none;
+    color: white; }
+    html a:hover {
+      text-decoration: underline; }
+
+body {
+  width: 900px;
+  margin: auto;
+  padding-top: 100px; }
+
+.topNav {
+  height: 95px;
+  min-width: 800px;
+  max-width: 2560px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-bottom: 2px white solid;
+  position: fixed;
+  float: top;
+  z-index: 1000;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  box-shadow: 0px 2.5px 5px #181818; }
+
+.container {
+  height: 85px;
+  width: 900px;
+  padding: 5px;
+  position: relative;
+  margin: auto; }
+
+.dash {
+  height: 84px;
+  float: right;
+  background-color: transparent;
+  position: relative;
+  margin-right: 5px; }
+
+.button {
+  height: 40px;
+  width: 130px;
+  display: inline-block;
+  vertical-align: text-bottom;
+  float: right;
+  padding: 5px;
+  position: relative;
+  margin: 0px 5px 0px 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px white solid;
+  border-radius: 5px; }
+  .button:hover {
+    background-color: rgba(255, 255, 255, 0.2); }
+  .button h3 {
+    margin: 0px;
+    position: absolute;
+    bottom: 0;
+    float: right;
+    padding: 5px; }
+
+#reagent_button {
+  background-color: rgba(150, 255, 150, 0.3); }
+
+.logo {
+  height: 40px;
+  width: 55px;
+  float: left;
+  display: inline-block;
+  padding: 5px;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px white solid;
+  border-radius: 5px; }
+  .logo:hover {
+    background-color: rgba(255, 255, 255, 0.2); }
+
+.title {
+  float: left;
+  display: block;
+  line-height: 130%;
+  margin: 0px;
+  position: absolute;
+  bottom: 0;
+  text-decoration: none; }
+
+.grid_frame {
+  width: 900px;
+  display: inline-block;
+  flex-direction: column; }
+
+.index_block {
+  display: inline-block;
+  flex-grow: 1;
+  flex-flow: row wrap;
+  width: 270px;
+  padding: 5px;
+  position: relative;
+  margin: 7.5px;
+  background-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 2.5px 2.5px 5px #181818;
+  border: 1px white solid;
+  border-radius: 5px; }
+  .index_block:hover {
+    background-color: rgba(255, 255, 255, 0.1); }
+  .index_block .title_text {
+    display: inline-block;
+    line-height: 50%;
+    position: relative;
+    margin: 8px 0px 8px 0px; }
+    .index_block .title_text a {
+      color: #c8c8ff; }
+    .index_block .title_text p {
+      color: #787878; }
+
+.reaction_frame {
+  width: 900px;
+  display: inline-block; }
+
+.entry_panel {
+  display: inline-block;
+  @inclde div_flair;
+  width: 446px; }
+  .entry_panel .title_text {
+    display: block;
+    position: relative;
+    float: left;
+    clear: left;
+    margin: 7px 0px 7px 0px;
+    width: 100%; }
+    .entry_panel .title_text a {
+      color: #c8c8ff; }
+
+.left {
+  float: left;
+  margin-right: 2px; }
+
+.right {
+  float: right;
+  margin-left: 2px; }
+
+.entry_container {
+  margin: 0px 0px 0px 15px; }
+
+.left_entry_container {
+  display: inline-block;
+  width: 100%; }
+
+.inline_button {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: solid 1px rgba(255, 255, 255, 0.75);
+  box-shadow: 2.5px 2.5px 5px #181818; }
+  .inline_button h3 {
+    float: center;
+    display: inline-block; }
+  .inline_button a {
+    margin: auto;
+    float: top;
+    display: inline-block; }
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
+
+html {
+	background-color: transparent;
+	background-image: url('FumeHood_Darkened.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    background-attachment: fixed;
+}
