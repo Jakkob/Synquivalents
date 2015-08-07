@@ -14,6 +14,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
+  
+gem 'pg'
 
 # Devise is a gem that enables secure user authentication on an app.
 gem 'devise'
@@ -39,9 +41,14 @@ gem 'best_in_place'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
-	gem 'sqlite3'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+
+  gem 'rspec-rails'
+
+  gem 'factory_girl_rails'
+
+  gem 'shoulda-matchers'
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
@@ -51,11 +58,22 @@ group :development, :test do
   gem 'rails-footnotes'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
+  #gem 'spring', '~> 1.3.6'
+end
+
+group :test do
+  
+  gem 'faker' 
+  
+  gem 'capybara' 
+  
+  gem 'guard-rspec' 
+
+  gem 'launchy'
+
 end
 
 group :production do
-	gem 'pg'
 
 	gem 'rails_12factor'
 end

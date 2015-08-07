@@ -2,7 +2,7 @@
 <h2>Starting Material:</h2>
 	<% @reactants.where( starting_material: true ).each do |start_mat| %>
 		
-		<% @reagent = Reagent.find_by(id: start_mat.reagents_id) %>
+		<% @reagent = Reagent.find_by(id: start_mat.reagent_id) %>
 		<div class='entry_container'>
 		<h3 class='title_text'>Reactant Name:</h3>
 			<p class='title_text'><%= @reagent.name %></p>
@@ -20,7 +20,7 @@
 <h2>Reactants:</h2>
 	<% @reactants.where( starting_material: false ).each do |other| %>
 	
-		<% @reagent = Reagent.find_by(id: other.reagents_id) %>
+		<% @reagent = Reagent.find_by(id: other.reagent_id) %>
 		<div class='entry_container'>
 		<h3 class='title_text'>Reactant Name:</h3>
 			<p class='title_text'><%= @reagent.name %></p>

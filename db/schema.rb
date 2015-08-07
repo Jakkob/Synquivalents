@@ -11,7 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150413131058) do
+ActiveRecord::Schema.define(version: 20150407193525) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "entries", force: :cascade do |t|
     t.string   "reaction_number"
@@ -26,13 +29,13 @@ ActiveRecord::Schema.define(version: 20150413131058) do
     t.boolean  "starting_material", default: false, null: false
     t.float    "equivalents"
     t.integer  "entry_id"
-    t.integer  "reagents_id"
+    t.integer  "reagent_id"
     t.datetime "created_at",                        null: false
     t.datetime "updated_at",                        null: false
   end
 
-  add_index "reactants", ["entry_id"], name: "index_reactants_on_entry_id"
-  add_index "reactants", ["reagents_id"], name: "index_reactants_on_reagents_id"
+  add_index "reactants", ["entry_id"], name: "index_reactants_on_entry_id", using: :btree
+  add_index "reactants", ["reagent_id"], name: "index_reactants_on_reagent_id", using: :btree
 
   create_table "reagents", force: :cascade do |t|
     t.string   "name"
@@ -45,4 +48,6 @@ ActiveRecord::Schema.define(version: 20150413131058) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "reactants", "entries"
+  add_foreign_key "reactants", "reagents"
 end
